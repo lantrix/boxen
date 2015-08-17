@@ -29,6 +29,12 @@ execute_after_confirm \
 	'brew doctor'
 	'brew install caskroom/cask/brew-cask'
 
+execute_after_confirm \
+	'Install Fonts' \
+	'curl -L -o /tmp/envy.zip https://www.dropbox.com/s/21ooc7mmr3d7h4c/envy.zip?dl=1' \
+	'unzip /tmp/envy.zip -d /tmp/' \
+	'mv /tmp/*ttf ~/Library/Fonts/'
+
 ALL_THE_THINGS=\
 'git'\
 ' git-flow'\
