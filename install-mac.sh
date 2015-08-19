@@ -26,7 +26,7 @@ execute_after_confirm \
 execute_after_confirm \
 	'Install Homebrew' \
 	'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' \
-	'brew doctor'
+	'brew doctor' \
 	'brew install caskroom/cask/brew-cask'
 
 execute_after_confirm \
@@ -35,16 +35,17 @@ execute_after_confirm \
 	'unzip /tmp/envy.zip -d /tmp/' \
 	'mv /tmp/*ttf ~/Library/Fonts/'
 
-ALL_THE_THINGS=\
+ALL_THE_THINGS_BREW=\
 'git'\
 ' git-flow'\
 ' jq'\
 ' gpg'\
-' wget'
+' wget'\
+' node'
 
 execute_after_confirm \
-	'Install useful packages' \
-	"brew install $ALL_THE_THINGS"
+	'Install useful brew packages' \
+	"brew install $ALL_THE_THINGS_BREW"
 
 execute_after_confirm \
 	"Install RVM" \
