@@ -59,7 +59,10 @@ execute_after_confirm \
 	"brew install $ALL_THE_THINGS_BREW" \
 
 #Fix node perms if needed
-sudo chown -R $USER /usr/local
+if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
+then
+	sudo chown -R $USER /usr/local
+fi
 brew link --overwrite node
 
 execute_after_confirm \
