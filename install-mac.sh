@@ -56,6 +56,7 @@ ALL_THE_THINGS_CASK=\
 ' slack'\
 ' intellij-idea-ce'\
 ' istat-menus'\
+' spotify'\
 ' beyond-compare'
 
 execute_after_confirm \
