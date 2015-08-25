@@ -4,6 +4,7 @@
 GITHUB_USER="lantrix"
 SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
 SUBLIME_USER_DIR="$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+FONT_ZIP_URI="https://www.dropbox.com/s/21ooc7mmr3d7h4c/envy.zip?dl=1"
 ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
 RUBY_VERSION="2.2.1"
@@ -38,8 +39,8 @@ execute_after_confirm \
 
 execute_after_confirm \
 	'Install Fonts' \
-	'curl -L -o /tmp/envy.zip https://www.dropbox.com/s/21ooc7mmr3d7h4c/envy.zip?dl=1' \
-	'unzip /tmp/envy.zip -d /tmp/' \
+	"curl --progress-bar -L -o /tmp/font.zip $FONT_ZIP_URI" \
+	'unzip /tmp/font.zip -d /tmp/' \
 	'mv /tmp/*ttf ~/Library/Fonts/'
 
 ALL_THE_THINGS_BREW=\
