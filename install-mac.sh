@@ -140,3 +140,7 @@ then
 	fi
 fi
 
+execute_after_confirm \
+        "Install CoffeeScript" \
+        "npm install -g coffee-script"
+
