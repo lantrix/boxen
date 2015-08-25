@@ -56,7 +56,11 @@ ALL_THE_THINGS_BREW=\
 
 execute_after_confirm \
 	'Install useful brew packages' \
-	"brew install $ALL_THE_THINGS_BREW"
+	"brew install $ALL_THE_THINGS_BREW" \
+
+#Fix node perms if needed
+sudo chown -R $USER /usr/local
+brew link --overwrite node
 
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
