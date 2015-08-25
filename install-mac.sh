@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+#Config
+GITHUB_USER="lantrix"
+SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
+SUBLIME_USER_DIR="$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
+ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
+RUBY_VERSION="2.2.1"
+
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
 	echo
@@ -72,7 +80,6 @@ execute_after_confirm \
 	#The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation
 	'mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app /Applications/'
 
-RUBY_VERSION="2.2.1"
 execute_after_confirm \
 	"Install RVM" \
 	"\\curl -sSL https://get.rvm.io | bash -s stable" \
@@ -85,7 +92,6 @@ execute_after_confirm \
 	'homesick clone lantrix/dotfiles' \
 	'homesick symlink dotfiles'
 
-GITHUB_USER="lantrix"
 execute_after_confirm \
 	"Install GO" \
 	"mkdir $HOME/Go" \
@@ -96,8 +102,6 @@ execute_after_confirm \
 	"export PATH=$PATH:$GOROOT/bin" \
 	"brew install go"
 
-SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
-SUBLIME_USER_DIR="$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
 execute_after_confirm \
 	"Prepare Sublime Settings Sync" \
 	"read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR'
