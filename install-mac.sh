@@ -70,7 +70,6 @@ ALL_THE_THINGS_CASK=\
 ' istat-menus'\
 ' spotify'\
 ' flux-beta'\
-' beyond-compare'
 ' beyond-compare'\
 ' sourcetree'
 
@@ -102,8 +101,28 @@ execute_after_confirm \
 	"export PATH=$PATH:$GOROOT/bin" \
 	"brew install go"
 
-execute_after_confirm \
-	"Prepare Sublime Settings Sync" \
-	"read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR'
-	"if [[ -d "$SUBLIME_SYNC_DIR" && -d "$SUBLIME_USER_DIR" ]]; then rm -r $SUBLIME_USER_DIR && ln -s $SUBLIME_SYNC_DIR $SUBLIME_USER_DIR ; else echo required dirs missing; fi"
+#Sublime Sync Setting
+if [[ -d /opt/homebrew-cask/Caskroom/sublime-text3 ]]
+then
+	echo "Setup Sublime Text 3 Userdata Sync"
+	read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR"
+	if [[ -d $SUBLIME_SYNC_DIR && -d $SUBLIME_USER_DIR ]]
+	then
+		rm -r $SUBLIME_USER_DIR && ln -s $SUBLIME_SYNC_DIR $SUBLIME_USER_DIR
+	else
+		echo Skipping Sublime Sync Setup - required dirs missing
+	fi
+fi
+
+#iStat Config
+if [[ -d /opt/homebrew-cask/Caskroom/istat-menus ]]
+then
+	echo "Setup iStat Menus config"
+	if [[ ! -f $ISTAT_PREF_FILE ]]
+	then
+		curl --progress-bar -L -o ${ISTAT_PREF_FILE} ${ISTAT_CONFIG_URI}
+	else
+		echo Existing iStat prefs left alone at $ISTAT_PREF_FILE
+	fi
+fi
 
