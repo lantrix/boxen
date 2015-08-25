@@ -47,6 +47,18 @@ execute_after_confirm \
 	'Install useful brew packages' \
 	"brew install $ALL_THE_THINGS_BREW"
 
+ALL_THE_THINGS_CASK=\
+'sublime-text'\
+' appzapper'\
+' 1password'\
+' google-chrome'\
+' slack'
+
+execute_after_confirm \
+	'Install useful cask packages' \
+	"brew cask install $ALL_THE_THINGS_CASK"
+
+RUBY_VERSION="2.2.1"
 execute_after_confirm \
 	"Install RVM" \
 	"\\curl -sSL https://get.rvm.io | bash -s stable" \
