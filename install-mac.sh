@@ -50,14 +50,19 @@ execute_after_confirm \
 ALL_THE_THINGS_CASK=\
 'sublime-text'\
 ' appzapper'\
+' dropbox'\
 ' 1password'\
 ' google-chrome'\
 ' slack'\
+' intellij-idea-ce'\
+' istat-menus'\
 ' beyond-compare'
 
 execute_after_confirm \
 	'Install useful cask packages' \
 	"brew cask install $ALL_THE_THINGS_CASK"
+	#The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation
+	'mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app /Applications/'
 
 RUBY_VERSION="2.2.1"
 execute_after_confirm \
@@ -82,3 +87,10 @@ execute_after_confirm \
 	"export PATH=$PATH:$GOPATH/bin" \
 	"export PATH=$PATH:$GOROOT/bin" \
 	"brew install go"
+
+SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
+SUBLIME_USER_DIR="$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+execute_after_confirm \
+	"Prepare Sublime Settings Sync" \
+	"read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR'
+	"if [[ -d "$SUBLIME_SYNC_DIR" && -d "$SUBLIME_USER_DIR" ]]; then rm -r $SUBLIME_USER_DIR && ln -s $SUBLIME_SYNC_DIR $SUBLIME_USER_DIR ; else echo required dirs missing; fi"
