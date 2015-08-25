@@ -3,7 +3,7 @@
 #Config
 GITHUB_USER="lantrix"
 SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
-SUBLIME_USER_DIR="$HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 FONT_ZIP_URI="https://www.dropbox.com/s/21ooc7mmr3d7h4c/envy.zip?dl=1"
 ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
@@ -110,10 +110,13 @@ execute_after_confirm \
 if [[ -d /opt/homebrew-cask/Caskroom/sublime-text3 ]]
 then
 	echo "Setup Sublime Text 3 Userdata Sync"
+	open -a "Sublime Text"
+	sleep 2
+	kill -9 `ps -ef |grep Sublime |egrep -v 'grep|plugin' | awk '{print $2}'`
 	read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR"
 	if [[ -d $SUBLIME_SYNC_DIR && -d $SUBLIME_USER_DIR ]]
 	then
-		rm -r $SUBLIME_USER_DIR && ln -s $SUBLIME_SYNC_DIR $SUBLIME_USER_DIR
+		rm -r "$SUBLIME_USER_DIR" && ln -s $SUBLIME_SYNC_DIR "$SUBLIME_USER_DIR"
 	else
 		echo Skipping Sublime Sync Setup - required dirs missing
 	fi
