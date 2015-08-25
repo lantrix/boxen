@@ -58,3 +58,14 @@ execute_after_confirm \
 	'homesick symlink dotfiles-vim' \
 	'homesick clone lantrix/dotfiles' \
 	'homesick symlink dotfiles'
+
+GITHUB_USER="lantrix"
+execute_after_confirm \
+	"Install GO" \
+	"mkdir $HOME/Go" \
+	"mkdir -p $HOME/Go/src/github.com/$GITHUB_USER" \
+	"export GOPATH=$HOME/Go" \
+	"export GOROOT=/usr/local/opt/go/libexec" \
+	"export PATH=$PATH:$GOPATH/bin" \
+	"export PATH=$PATH:$GOROOT/bin" \
+	"brew install go"
