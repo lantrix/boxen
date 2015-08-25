@@ -91,7 +91,9 @@ execute_after_confirm \
 
 execute_after_confirm \
 	"Install RVM" \
-	"\\curl -sSL https://get.rvm.io | bash -s stable" \
+	"#curl -sSL https://get.rvm.io | bash -s stable" \
+	"curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
+	"\\curl -sSL https://get.rvm.io | bash -s stable"
 
 execute_after_confirm \
 	"Install Homesick" \
