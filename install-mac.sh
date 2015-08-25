@@ -52,7 +52,8 @@ ALL_THE_THINGS_CASK=\
 ' appzapper'\
 ' 1password'\
 ' google-chrome'\
-' slack'
+' slack'\
+' beyond-compare'
 
 execute_after_confirm \
 	'Install useful cask packages' \
