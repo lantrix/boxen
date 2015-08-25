@@ -63,6 +63,8 @@ ALL_THE_THINGS_CASK=\
 ' spotify'\
 ' flux-beta'\
 ' beyond-compare'
+' beyond-compare'\
+' sourcetree'
 
 execute_after_confirm \
 	'Install useful cask packages' \
