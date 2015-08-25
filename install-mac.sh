@@ -124,6 +124,8 @@ then
 	else
 		echo Skipping Sublime Sync Setup - required dirs missing
 	fi
+	echo "Installing Package Control"
+	curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 fi
 
 #iStat Config
