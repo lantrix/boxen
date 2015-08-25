@@ -79,7 +79,8 @@ ALL_THE_THINGS_CASK=\
 ' spotify'\
 ' flux-beta'\
 ' beyond-compare'\
-' sourcetree'
+' sourcetree'\
+' vmware-fusion'
 
 CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
