@@ -86,7 +86,7 @@ CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome
 execute_after_confirm \
 	'Install useful cask packages' \
 	"brew cask install $ALL_THE_THINGS_CASK" \
-	"if [[ -d $CHROME_CASK_DIR ]]; then mv $CHROME_CASK_DIR /Applications/ ; fi" 
+	"if [[ -d $CHROME_CASK_DIR ]]; then mv $CHROME_CASK_DIR /Applications/ ; fi"
 
 execute_after_confirm \
 	"Install RVM" \
@@ -113,6 +113,9 @@ execute_after_confirm \
 #Sublime Sync Setting
 if [[ -d /opt/homebrew-cask/Caskroom/sublime-text3 ]]
 then
+	echo "Installing Package Control"
+	curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
+
 	echo "Setup Sublime Text 3 Userdata Sync"
 	open -a "Sublime Text"
 	sleep 2
@@ -124,8 +127,6 @@ then
 	else
 		echo Skipping Sublime Sync Setup - required dirs missing
 	fi
-	echo "Installing Package Control"
-	curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 fi
 
 #iStat Config
