@@ -61,6 +61,7 @@ ALL_THE_THINGS_CASK=\
 ' intellij-idea-ce'\
 ' istat-menus'\
 ' spotify'\
+' flux-beta'\
 ' beyond-compare'
 
 execute_after_confirm \
