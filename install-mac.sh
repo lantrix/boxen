@@ -73,11 +73,12 @@ ALL_THE_THINGS_CASK=\
 ' beyond-compare'\
 ' sourcetree'
 
+CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
+#The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
 execute_after_confirm \
 	'Install useful cask packages' \
-	"brew cask install $ALL_THE_THINGS_CASK"
-	#The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation
-	'mv /opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app /Applications/'
+	"brew cask install $ALL_THE_THINGS_CASK" \
+	"if [[ -d $CHROME_CASK_DIR ]]; then mv $CHROME_CASK_DIR /Applications/ ; fi" 
 
 execute_after_confirm \
 	"Install RVM" \
