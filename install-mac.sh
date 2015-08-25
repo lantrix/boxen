@@ -40,8 +40,11 @@ execute_after_confirm \
 execute_after_confirm \
 	'Install Fonts' \
 	"curl --progress-bar -L -o /tmp/font.zip $FONT_ZIP_URI" \
-	'unzip /tmp/font.zip -d /tmp/' \
-	'mv /tmp/*ttf ~/Library/Fonts/'
+	'unzip -o /tmp/font.zip -d /tmp/' \
+	'IFS=$SAVEIFS' \
+	'IFS=$(echo -en "\n\b")' \
+	'for i in `ls /tmp/*.ttf`; do mv $i $HOME/Library/Fonts/ ; done' \
+	'IFS=$SAVEIFS'
 
 ALL_THE_THINGS_BREW=\
 'git'\
