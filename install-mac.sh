@@ -119,19 +119,23 @@ execute_after_confirm \
 #Sublime Sync Setting
 if [[ -d /opt/homebrew-cask/Caskroom/sublime-text3 ]]
 then
-	echo "Installing Package Control"
-	curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
+	if [[ ! -L $SUBLIME_USER_DIR ]]; then
+		echo "Installing Package Control"
+		curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
 
-	echo "Setup Sublime Text 3 Userdata Sync"
-	open -a "Sublime Text"
-	sleep 2
-	kill -9 `ps -ef |grep Sublime |egrep -v 'grep|plugin' | awk '{print $2}'`
-	read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR"
-	if [[ -d $SUBLIME_SYNC_DIR && -d $SUBLIME_USER_DIR ]]
-	then
-		rm -r "$SUBLIME_USER_DIR" && ln -s $SUBLIME_SYNC_DIR "$SUBLIME_USER_DIR"
+		echo "Setup Sublime Text 3 Userdata Sync"
+		open -a "Sublime Text"
+		sleep 2
+		kill -9 `ps -ef |grep Sublime |egrep -v 'grep|plugin' | awk '{print $2}'`
+		read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR"
+		if [[ -d $SUBLIME_SYNC_DIR && -d $SUBLIME_USER_DIR ]]
+		then
+			rm -r "$SUBLIME_USER_DIR" && ln -s $SUBLIME_SYNC_DIR "$SUBLIME_USER_DIR"
+		else
+			echo Skipping Sublime Sync Setup - required dirs missing
+		fi
 	else
-		echo Skipping Sublime Sync Setup - required dirs missing
+		echo Skipping Sublime Sync Setup - already in place
 	fi
 fi
 
@@ -151,3 +155,11 @@ execute_after_confirm \
         "Install CoffeeScript" \
         "npm install -g coffee-script"
 
+execute_after_confirm \
+	'Install Python PIP' \
+	"curl --progress-bar -L -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py" \
+	"sudo -H python /tmp/get-pip.py"
+
+execute_after_confirm \
+	'Install AWS CLI' \
+	"sudo -H pip install awscli"
