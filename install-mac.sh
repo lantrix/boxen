@@ -52,7 +52,8 @@ ALL_THE_THINGS_BREW=\
 ' jq'\
 ' gpg'\
 ' wget'\
-' node'
+' node'\
+' macvim --env-std --override-system-vim'
 
 execute_after_confirm \
 	'Install useful brew packages' \
@@ -68,7 +69,8 @@ brew link --overwrite node
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
 	'brew install caskroom/cask/brew-cask' \
-	'brew tap caskroom/versions'
+	'brew tap caskroom/versions' \
+	'brew tap caskroom/fonts'
 
 ALL_THE_THINGS_CASK=\
 'sublime-text3'\
@@ -84,7 +86,9 @@ ALL_THE_THINGS_CASK=\
 ' beyond-compare'\
 ' sourcetree'\
 ' vmware-fusion7'\
-' iterm2'
+' iterm2'\
+' font-source-code-pro'\
+' font-source-code-pro-for-powerline'
 
 CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
