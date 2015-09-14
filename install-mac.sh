@@ -162,6 +162,9 @@ execute_after_confirm \
 
 execute_after_confirm \
 	'Install AWS CLI' \
-	"sudo -H pip install awscli"
 	"sudo -H pip install awscli" \
 	"complete -C '`which aws_completer`' aws"
+
+execute_after_confirm \
+	'Install Powerline' \
+	"pip install --user powerline-status" \
