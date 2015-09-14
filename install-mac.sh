@@ -103,8 +103,9 @@ execute_after_confirm \
 	'gem install homesick' \
 	'homesick clone lantrix/dotfiles-vim' \
 	'homesick symlink dotfiles-vim' \
-	'homesick clone lantrix/dotfiles' \
-	'homesick symlink dotfiles'
+	'#homesick clone lantrix/dotfiles' \
+	'#homesick symlink dotfiles' \
+	'vim +PluginInstall +qall'
 
 execute_after_confirm \
 	"Install GO" \
