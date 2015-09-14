@@ -8,7 +8,7 @@ ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
 ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
-RUBY_VERSION="2.2.1"
+RUBY_VERSION="2.2"
 
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
@@ -93,7 +93,10 @@ execute_after_confirm \
 	"Install RVM" \
 	"#curl -sSL https://get.rvm.io | bash -s stable" \
 	"curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
-	"\\curl -sSL https://get.rvm.io | bash -s stable"
+	"\\curl -sSL https://get.rvm.io | bash -s stable" \
+	"source $HOME/.rvm/scripts/rvm" \
+	"rvm install $RUBY_VERSION" \
+	"rvm --default use $RUBY_VERSION"
 
 execute_after_confirm \
 	"Install Homesick" \
