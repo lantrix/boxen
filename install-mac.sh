@@ -83,7 +83,7 @@ ALL_THE_THINGS_CASK=\
 ' flux-beta'\
 ' beyond-compare'\
 ' sourcetree'\
-' vmware-fusion'\
+' vmware-fusion7'\
 ' iterm2'
 
 CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
