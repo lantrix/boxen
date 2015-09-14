@@ -155,6 +155,8 @@ then
 	if [[ ! -f $ITERM2_PREF_FILE ]]
 	then
 		curl --progress-bar -L -o ${ITERM2_PREF_FILE} ${ITERM2_CONFIG_URI}
+		curl -L https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors > /tmp/base16-ocean.dark.itermcolors
+		open /tmp/base16-ocean.dark.itermcolors
 	else
 		echo Existing iStat prefs left alone at $ITERM2_PREF_FILE
 	fi
