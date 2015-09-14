@@ -4,7 +4,6 @@
 GITHUB_USER="lantrix"
 SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
 SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-FONT_ZIP_URI="https://www.dropbox.com/s/21ooc7mmr3d7h4c/envy.zip?dl=1"
 ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
 ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
@@ -38,15 +37,6 @@ execute_after_confirm \
 	'Install Homebrew' \
 	'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' \
 	'brew doctor'
-
-execute_after_confirm \
-	'Install Fonts' \
-	"curl --progress-bar -L -o /tmp/font.zip $FONT_ZIP_URI" \
-	'unzip -o /tmp/font.zip -d /tmp/' \
-	'IFS=$SAVEIFS' \
-	'IFS=$(echo -en "\n\b")' \
-	'for i in `ls /tmp/*.ttf`; do mv $i $HOME/Library/Fonts/ ; done' \
-	'IFS=$SAVEIFS'
 
 ALL_THE_THINGS_BREW=\
 'git'\
