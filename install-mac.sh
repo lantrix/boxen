@@ -45,7 +45,8 @@ ALL_THE_THINGS_BREW=\
 ' gpg'\
 ' wget'\
 ' node'\
-' macvim --env-std --with-override-system-vim'
+' macvim --env-std --with-override-system-vim'\
+' tree'
 
 execute_after_confirm \
 	'Install useful brew packages' \
