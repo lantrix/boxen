@@ -184,3 +184,4 @@ execute_after_confirm \
 execute_after_confirm \
 	'Install Powerline' \
 	"pip install --user powerline-status" \
+	"pip install --user pyuv"
