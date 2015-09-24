@@ -104,10 +104,12 @@ execute_after_confirm \
 execute_after_confirm \
 	"Install Homesick" \
 	'gem install homesick' \
+	'homesick clone lantrix/dotfiles' \
+	'homesick symlink dotfiles' \
 	'homesick clone lantrix/dotfiles-vim' \
 	'homesick symlink dotfiles-vim' \
-	'#homesick clone lantrix/dotfiles' \
-	'#homesick symlink dotfiles' \
+	'homesick clone lantrix/powerline-config' \
+	'homesick symlink powerline-config' \
 	'vim +PluginInstall +qall'
 
 execute_after_confirm \
@@ -187,3 +189,4 @@ execute_after_confirm \
 	'Install Powerline' \
 	"pip install --user powerline-status" \
 	"pip install --user pyuv"
+
