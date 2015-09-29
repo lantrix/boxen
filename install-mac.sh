@@ -8,6 +8,8 @@ ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
 ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
+VMWARE_PREF_FILE="$HOME/Library/Preferences/VMware Fusion/preferences"
+VMWARE_CONFIG_URI="https://www.dropbox.com/s/kp055mivqdfxlxz/preferences?dl=1"
 RUBY_VERSION="2.2"
 
 function execute_after_confirm {
@@ -168,6 +170,18 @@ then
 		open /tmp/base16-ocean.dark.itermcolors
 	else
 		echo Existing iStat prefs left alone at $ITERM2_PREF_FILE
+	fi
+fi
+
+#Vmware Fusion Config
+if [[ -d /opt/homebrew-cask/Caskroom/vmware-fusion7 ]]
+then
+	echo "Setup VMWare config"
+	if [[ ! -f $VMWARE_PREF_FILE ]]
+	then
+		curl --progress-bar -L -o ${VMWARE_PREF_FILE} ${VMWARE_CONFIG_URI}
+	else
+		echo Existing VMWare prefs left alone at $VMWARE_PREF_FILE
 	fi
 fi
 
