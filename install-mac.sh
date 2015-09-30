@@ -10,6 +10,7 @@ ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
 VMWARE_PREF_FILE="$HOME/Library/Preferences/VMware Fusion/preferences"
 VMWARE_CONFIG_URI="https://www.dropbox.com/s/kp055mivqdfxlxz/preferences?dl=1"
+VAGRANT_LICENCE_URI="https://www.dropbox.com/s/sanitized/license.lic?dl=1"
 RUBY_VERSION="2.2"
 
 function execute_after_confirm {
@@ -85,7 +86,8 @@ ALL_THE_THINGS_CASK=\
 ' font-source-code-pro'\
 ' font-source-code-pro-for-powerline'\
 ' functionflip'\
-' chefdk'
+' chefdk'\
+' vagrant'
 
 CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
@@ -182,6 +184,18 @@ then
 		curl --progress-bar -L -o ${VMWARE_PREF_FILE} ${VMWARE_CONFIG_URI}
 	else
 		echo Existing VMWare prefs left alone at $VMWARE_PREF_FILE
+	fi
+fi
+
+#Vagrant Config/Licence
+if [[ -d /opt/homebrew-cask/Caskroom/vagrant ]]
+then
+	echo "Install Vagrant VMWare plugin"
+	curl --progress-bar -L -o /tmp/license.lic ${VAGRANT_LICENCE_URI}
+	vagrant plugin install vagrant-vmware-fusion
+	if [[ -f /tmp/license.lic ]]
+	then
+		vagrant plugin license vagrant-vmware-fusion /tmp/license.lic
 	fi
 fi
 
