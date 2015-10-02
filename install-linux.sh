@@ -40,10 +40,11 @@ ALL_THE_THINGS_APT=\
 
 execute_after_confirm \
 	'Get latest Git' \
-	'apt-get install python-software-properties software-properties-common' \
-	'sudo add-apt-repository ppa:git-core/ppa -y' \
-	'sudo apt-get update' \
-	'sudo apt-get install git' \
+	'apt-get install -y python-software-properties software-properties-common' \
+	'add-apt-repository ppa:git-core/ppa -y' \
+	'apt-get autoremove -y' \
+	'apt-get update -y' \
+	'apt-get install -y git' \
 	'git --version'
 
 execute_after_confirm \
