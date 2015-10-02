@@ -28,11 +28,11 @@ execute_after_confirm \
 	'apt-get update' \
 	'apt-get upgrade'
 
-setup_admin_user \
+execute_after_confirm \
 	'Install Admin User' \
-	'groupadd admin'
-	"useradd -d /home/$adminuser -m $adminuser -g admin" \
-	"passwd $adminuser"
+	'groupadd admin' \
+	"useradd -d /home/${ADMIN_USER} -m ${ADMIN_USER} -g admin" \
+	"passwd ${ADMIN_USER}"
 
 ALL_THE_THINGS_APT=\
 'git'\
@@ -60,8 +60,8 @@ execute_after_confirm \
 execute_after_confirm \
 	"Install Homesick" \
 	'gem install homesick' \
-	"homesick clone $GITHUB_USER/dotfiles" \
+	"homesick clone ${GITHUB_USER}/dotfiles" \
 	"homesick symlink dotfiles" \
-	"homesick clone $GITHUB_USER/dotfiles-vim" \
+	"homesick clone ${GITHUB_USER}/dotfiles-vim" \
 	"homesick symlink dotfiles-vim" \
 	'vim +PluginInstall +qall'
