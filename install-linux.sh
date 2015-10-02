@@ -37,15 +37,16 @@ execute_after_confirm \
 ALL_THE_THINGS_APT=\
 'git'\
 ' vim'\
-' tree'\
-' ruby-rvm'
+' tree'
 
 execute_after_confirm \
 	'Install useful packages' \
 	"apt-get install $ALL_THE_THINGS_APT" \
 
 execute_after_confirm \
-	"Set RVM" \
+	"Setup RVM" \
+	"curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
+	"\\curl -L https://get.rvm.io | bash -s stable --ruby --autolibs=enable --auto-dotfiles" \
 	"source $HOME/.rvm/scripts/rvm" \
 	"rvm install $RUBY_VERSION" \
 	"rvm --default use $RUBY_VERSION"
