@@ -36,23 +36,16 @@ execute_after_confirm \
 
 ALL_THE_THINGS_APT=\
 'git'\
-' git-flow'\
-' jq'\
-' gpg'\
-' wget'\
-' node'\
 ' vim'\
-' tree'
+' tree'\
+' ruby-rvm'
 
 execute_after_confirm \
 	'Install useful packages' \
 	"apt-get install $ALL_THE_THINGS_APT" \
 
 execute_after_confirm \
-	"Install RVM" \
-	"#curl -sSL https://get.rvm.io | bash -s stable" \
-	"curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
-	"\\curl -sSL https://get.rvm.io | bash -s stable" \
+	"Set RVM" \
 	"source $HOME/.rvm/scripts/rvm" \
 	"rvm install $RUBY_VERSION" \
 	"rvm --default use $RUBY_VERSION"
