@@ -34,10 +34,6 @@ execute_after_confirm \
 	"useradd -d /home/${ADMIN_USER} -m ${ADMIN_USER} -g admin" \
 	"passwd ${ADMIN_USER}"
 
-ALL_THE_THINGS_APT=\
-' vim'\
-' tree'
-
 execute_after_confirm \
 	'Get latest Git' \
 	'apt-get install -y python-software-properties software-properties-common' \
@@ -46,6 +42,11 @@ execute_after_confirm \
 	'apt-get update -y' \
 	'apt-get install -y git' \
 	'git --version'
+
+ALL_THE_THINGS_APT=\
+' vim'\
+' tree'\
+' python-pip'
 
 execute_after_confirm \
 	'Install useful packages' \

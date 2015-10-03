@@ -45,3 +45,7 @@ execute_after_confirm \
 	"echo deb http://apt.syncthing.net/ syncthing release | sudo tee /etc/apt/sources.list.d/syncthing-release.list" \
 	"sudo apt-get update" \
 	"sudo apt-get install syncthing"
+
+execute_after_confirm \
+	"Install Powerline" \
+	"pip install --user git+git://github.com/powerline/powerline"
