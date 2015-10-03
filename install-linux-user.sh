@@ -31,15 +31,6 @@ execute_after_confirm \
 	"rvm --default use $RUBY_VERSION"
 
 execute_after_confirm \
-	"Install Homesick" \
-	'gem install homesick' \
-	"homesick clone ${GITHUB_USER}/dotfiles" \
-	"homesick symlink dotfiles" \
-	"homesick clone ${GITHUB_USER}/dotfiles-vim" \
-	"homesick symlink dotfiles-vim" \
-	'vim +PluginInstall +qall'
-
-execute_after_confirm \
 	"Install Syncthing" \
 	"curl -s https://syncthing.net/release-key.txt | sudo apt-key add -" \
 	"echo deb http://apt.syncthing.net/ syncthing release | sudo tee /etc/apt/sources.list.d/syncthing-release.list" \
@@ -49,3 +40,12 @@ execute_after_confirm \
 execute_after_confirm \
 	"Install Powerline" \
 	"pip install --user git+git://github.com/powerline/powerline"
+
+execute_after_confirm \
+	"Install Homesick" \
+	'gem install homesick' \
+	"homesick clone ${GITHUB_USER}/dotfiles" \
+	"homesick symlink dotfiles" \
+	"homesick clone ${GITHUB_USER}/dotfiles-vim" \
+	"homesick symlink dotfiles-vim" \
+	'vim +PluginInstall +qall'
