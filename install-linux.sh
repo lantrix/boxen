@@ -46,7 +46,8 @@ execute_after_confirm \
 ALL_THE_THINGS_APT=\
 ' vim'\
 ' tree'\
-' python-pip'
+' python-pip'\
+' inadyn'
 
 execute_after_confirm \
 	'Install useful packages' \
