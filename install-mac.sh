@@ -205,6 +205,10 @@ execute_after_confirm \
         "npm install -g coffee-script"
 
 execute_after_confirm \
+        "Install esvalidate npm for jsvalidate sublime plugin \
+        "npm install -g esvalidate"
+
+execute_after_confirm \
 	'Install Python PIP' \
 	"curl --progress-bar -L -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py" \
 	"sudo -H python /tmp/get-pip.py"
