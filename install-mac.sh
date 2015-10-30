@@ -88,7 +88,8 @@ ALL_THE_THINGS_CASK=\
 ' functionflip'\
 ' chefdk'\
 ' vagrant'\
-' charles'
+' charles'\
+' remote-desktop-manager'
 
 CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
@@ -147,6 +148,18 @@ then
 		fi
 	else
 		echo Skipping Sublime Sync Setup - already in place
+	fi
+fi
+
+#iStat Config
+if [[ -d /opt/homebrew-cask/Caskroom/istat-menus ]]
+then
+	echo "Setup iStat Menus config"
+	if [[ ! -f $ISTAT_PREF_FILE ]]
+	then
+		curl --progress-bar -L -o ${ISTAT_PREF_FILE} ${ISTAT_CONFIG_URI}
+	else
+		echo Existing iStat prefs left alone at $ISTAT_PREF_FILE
 	fi
 fi
 
