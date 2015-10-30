@@ -14,6 +14,7 @@ You can get the command line tools installed by running in terminal:
 ### Usage
 
 _Tested and working on Yosemite_
+
 Download and `bash install-mac.sh` or if you want to live on the edge:
 
     bash <(curl -fsSL https://raw.githubusercontent.com/lantrix/boxen/master/install-mac.sh)
