@@ -43,7 +43,7 @@ execute_after_confirm \
 
 ALL_THE_THINGS_BREW=\
 'git'\
-' git-flow'\
+' git-flow-avh'\
 ' jq'\
 ' gpg'\
 ' wget'\
