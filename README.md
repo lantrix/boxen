@@ -41,4 +41,8 @@ On a clean Windows 10 install, from an elevated/privileged cmd.exe launch the [b
 
 	.\install-windows.cmd
 
-This will also run some post-boxstarter script `Complete-Bootstrap.ps1`
+ * This will also run some post-boxstarter script `Complete-Bootstrap.ps1` including:
+ 	- Install choco
+ 	- Setup Sublime
+ 	- Patch VS2015 Update 2 [with hotfixes](https://msdn.microsoft.com/library/mt695655.aspx)
+ 	-
