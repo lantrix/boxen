@@ -28,3 +28,15 @@ _TBD_
 ### Usage
 
 _TBD_
+
+## Windows 10
+
+### Pre-requisites
+
+Windows 10 OS fresh installation.
+
+### Usage
+
+On a clean Windows 10 install, from an elevated/priveliged cmd.exe launch the [boxstarter](http://boxstarter.org):
+
+	.\install-windows.cmd
