@@ -15,7 +15,7 @@ try {
   cinst sourcecodepro
 
   # Dev
-  cinst visualstudio2015community -packageParameters "--AdminFile https://gist.githubusercontent.com/lantrix/84b6f50e621f3eb0dedcf4bcac085361/raw/47a632fbbac56482c808115c7eec5dc22c6d960e/AdminDeployment.xml"
+  cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
   cinst githubforwindows
   cinst sysinternals
   cinst windbg

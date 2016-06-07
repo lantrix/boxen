@@ -37,6 +37,8 @@ Windows 10 OS fresh installation.
 
 ### Usage
 
-On a clean Windows 10 install, from an elevated/priveliged cmd.exe launch the [boxstarter](http://boxstarter.org):
+On a clean Windows 10 install, from an elevated/privileged cmd.exe launch the [boxstarter](http://boxstarter.org):
 
 	.\install-windows.cmd
+
+This will also run some post-boxstarter script `Complete-Bootstrap.ps1`
