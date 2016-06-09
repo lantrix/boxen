@@ -24,7 +24,7 @@ try {
 
   # Dev
   cup visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
-  cup VisualStudioCode
+  cup visualstudiocode
   cup sysinternals
   cup windbg
   cup dotPeek
