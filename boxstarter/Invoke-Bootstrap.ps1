@@ -14,6 +14,9 @@ try {
   cinst putty
   cinst sourcecodepro
 
+  # Media
+  cinst spotify
+
   # Powershell
   cinst windowsazurepowershell
   cinst AWSTools.Powershell
