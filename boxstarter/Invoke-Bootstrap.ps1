@@ -9,18 +9,22 @@ try {
   cinst sourcetree
   cinst git -params "/GitAndUnixToolsOnPath /NoAutoCrlf"
   cinst git-credential-manager-for-windows
-  cinst poshgit
+  cinst githubforwindows
   cinst rdm
   cinst putty
   cinst sourcecodepro
 
+  # Powershell
+  cinst windowsazurepowershell
+  cinst AWSTools.Powershell
+  cinst poshgit
+
   # Dev
   cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
-  cinst githubforwindows
+  VisualStudioCode
   cinst sysinternals
   cinst windbg
   cinst dotPeek
-  cinst windowsazurepowershell
 
   # Basic windows stuff
   Install-WindowsUpdate -AcceptEula
