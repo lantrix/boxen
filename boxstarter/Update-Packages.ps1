@@ -29,6 +29,9 @@ try {
   choco upgrade windbg
   choco upgrade dotPeek
 
+  # NodeJS
+  choco upgrade nodejs
+
   Write-ChocolateySuccess 'Windows Packages Upgraded'
 } catch {
   Write-ChocolateyFailure 'Windows Bootstrap: ' $($_.Exception.Message)

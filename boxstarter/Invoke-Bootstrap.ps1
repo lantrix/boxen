@@ -29,6 +29,9 @@ try {
   cinst windbg
   cinst dotPeek
 
+  # NodeJS
+  cinst nodejs
+
   # Basic windows stuff
   Install-WindowsUpdate -AcceptEula
   Update-ExecutionPolicy Unrestricted
