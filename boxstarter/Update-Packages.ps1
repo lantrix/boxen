@@ -1,41 +1,35 @@
 try {
   # Tools
-  cup slack
-  cup dropbox
-  cup 1password
-  cup sublimetext3
-  cup googlechrome
-  cup beyondcompare
-  cup sourcetree
-  cup git -params "/GitAndUnixToolsOnPath /NoAutoCrlf"
-  cup git-credential-manager-for-windows
-  cup githubforwindows
-  cup rdm
-  cup putty
-  cup sourcecodepro
+  choco upgrade slack
+  choco upgrade dropbox
+  choco upgrade 1password
+  choco upgrade sublimetext3
+  choco upgrade googlechrome
+  choco upgrade beyondcompare
+  choco upgrade sourcetree
+  choco upgrade git -params "/GitAndUnixToolsOnPath /NoAutoCrlf"
+  choco upgrade git-credential-manager-for-windows
+  choco upgrade githubforwindows
+  choco upgrade rdm
+  choco upgrade putty
+  choco upgrade sourcecodepro
 
   # Media
-  cup spotify
+  choco upgrade spotify
 
   # Powershell
-  cup windowsazurepowershell
-  cup AWSTools.Powershell
-  cup poshgit
+  choco upgrade windowsazurepowershell
+  choco upgrade AWSTools.Powershell
+  choco upgrade poshgit
 
   # Dev
-  cup visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
-  cup visualstudiocode
-  cup sysinternals
-  cup windbg
-  cup dotPeek
+  choco upgrade visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
+  choco upgrade visualstudiocode
+  choco upgrade sysinternals
+  choco upgrade windbg
+  choco upgrade dotPeek
 
-  # Basic windows stuff
-  Install-WindowsUpdate -AcceptEula
-  Update-ExecutionPolicy Unrestricted
-  Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
-  Set-TaskbarSmall
-
-  Write-ChocolateySuccess 'Windows boostrapped'
+  Write-ChocolateySuccess 'Windows Packages Upgraded'
 } catch {
   Write-ChocolateyFailure 'Windows Bootstrap: ' $($_.Exception.Message)
   throw
