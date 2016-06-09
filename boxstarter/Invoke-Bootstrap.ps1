@@ -24,7 +24,7 @@ try {
 
   # Dev
   cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
-  VisualStudioCode
+  cinst VisualStudioCode
   cinst sysinternals
   cinst windbg
   cinst dotPeek
