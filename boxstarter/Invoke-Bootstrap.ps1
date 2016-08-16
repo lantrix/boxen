@@ -29,8 +29,17 @@ try {
   cinst windbg
   cinst dotPeek
 
+  # Java Dev
+  cinst jdk7
+  cinst intellijidea-community
+  cinst gradle
+
   # NodeJS
   cinst nodejs
+
+  # VMs
+  cinst vagrant
+  cinst virtualbox
 
   # Basic windows stuff
   Install-WindowsUpdate -AcceptEula
