@@ -43,8 +43,5 @@ On a clean Windows 10 install, from an elevated/privileged cmd.exe launch the [b
 
  * This will also run some post-boxstarter script `Complete-Bootstrap.ps1` including:
  	- Install choco
- 	- Setup Sublime config (from Dropbox)
- 	- Patch VS2015 Update 2 [with hotfixes](https://msdn.microsoft.com/library/mt695655.aspx)
+	- Install [.NET CORE 1.0.1 tools Preview 2](https://www.microsoft.com/net/core#windowsvs2015)
  	- Install [Azure VS2015 SDK](https://msdn.microsoft.com/library/mt695655.aspx)
- 	- Install [Latest NuGet Manager extension](https://www.microsoft.com/net/core#windows) for Visual Studio
-	- Install [.NET CORE RC2](https://www.microsoft.com/net/core#windows)
