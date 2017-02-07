@@ -52,7 +52,7 @@ ALL_THE_THINGS_BREW=\
 ' jq'\
 ' gpg'\
 ' wget'\
-' node'\
+' node@6'\
 ' macvim --env-std --with-override-system-vim'\
 ' tree'\
 ' tig'
