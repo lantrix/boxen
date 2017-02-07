@@ -54,7 +54,7 @@ ALL_THE_THINGS_BREW=\
 ' wget'\
 ' node'\
 ' macvim --env-std --with-override-system-vim'\
-' tree'
+' tree'\
 ' tig'
 
 execute_after_confirm \
@@ -73,6 +73,7 @@ execute_after_confirm \
 	'brew install caskroom/cask/brew-cask' \
 	'brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup' \
 	'brew tap caskroom/versions' \
+	'brew tap buo/cask-upgrade' \
 	'brew tap caskroom/fonts'
 
 ALL_THE_THINGS_CASK=\
