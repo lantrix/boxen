@@ -55,6 +55,7 @@ ALL_THE_THINGS_BREW=\
 ' node'\
 ' macvim --env-std --with-override-system-vim'\
 ' tree'
+' tig'
 
 execute_after_confirm \
 	'Install useful brew packages' \
@@ -75,7 +76,7 @@ execute_after_confirm \
 	'brew tap caskroom/fonts'
 
 ALL_THE_THINGS_CASK=\
-'sublime-text3'\
+'sublime-text'\
 ' appzapper'\
 ' dropbox'\
 ' 1password'\
