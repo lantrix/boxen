@@ -101,7 +101,7 @@ ALL_THE_THINGS_CASK=\
 ' tunnelblick'\
 ' visual-studio-code'
 
-CHROME_CASK_DIR="/opt/homebrew-cask/Caskroom/google-chrome/latest/Google\ Chrome.app"
+CHROME_CASK_DIR="/usr/local/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
 execute_after_confirm \
 	'Install useful cask packages' \
@@ -139,7 +139,7 @@ execute_after_confirm \
 	"brew install go"
 
 #Sublime Sync Setting
-if [[ -d /opt/homebrew-cask/Caskroom/sublime-text3 ]]
+if [[ -d /usr/local/Caskroom/sublime-text3 ]]
 then
 	if [[ ! -L $SUBLIME_USER_DIR ]]; then
 		echo "Installing Package Control"
@@ -162,7 +162,7 @@ then
 fi
 
 #iStat Config
-if [[ -d /opt/homebrew-cask/Caskroom/istat-menus ]]
+if [[ -d /usr/local/Caskroom/istat-menus ]]
 then
 	echo "Setup iStat Menus config"
 	if [[ ! -f $ISTAT_PREF_FILE ]]
@@ -174,7 +174,7 @@ then
 fi
 
 #iStat Config
-if [[ -d /opt/homebrew-cask/Caskroom/istat-menus ]]
+if [[ -d /usr/local/Caskroom/istat-menus ]]
 then
 	echo "Setup iStat Menus config"
 	if [[ ! -f $ISTAT_PREF_FILE ]]
@@ -186,7 +186,7 @@ then
 fi
 
 #iTerm2 Config
-if [[ -d /opt/homebrew-cask/Caskroom/iterm2 ]]
+if [[ -d /usr/local/Caskroom/iterm2 ]]
 then
 	echo "Setup iTerm2 config"
 	if [[ ! -f $ITERM2_PREF_FILE ]]
@@ -200,7 +200,7 @@ then
 fi
 
 #Vmware Fusion Config
-if [[ -d /opt/homebrew-cask/Caskroom/vmware-fusion7 ]]
+if [[ -d /usr/local/Caskroom/vmware-fusion7 ]]
 then
 	echo "Setup VMWare config"
 	if [[ ! -f $VMWARE_PREF_FILE ]]
@@ -212,7 +212,7 @@ then
 fi
 
 #Vagrant Config/Licence
-if [[ -d /opt/homebrew-cask/Caskroom/vagrant ]]
+if [[ -d /usr/local/Caskroom/vagrant ]]
 then
 	echo "Install Vagrant VMWare plugin"
 	curl --progress-bar -L -o /tmp/license.lic ${VAGRANT_LICENCE_URI}
