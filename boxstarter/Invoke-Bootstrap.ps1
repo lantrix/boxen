@@ -35,7 +35,7 @@ try {
   cinst gradle
 
   # NodeJS
-  cinst nodejs
+  cinst nodejs-lts
 
   # VMs
   cinst vagrant
