@@ -49,3 +49,9 @@ execute_after_confirm \
 	"homesick clone ${GITHUB_USER}/dotfiles-vim" \
 	"homesick symlink dotfiles-vim" \
 	'vim +PluginInstall +qall'
+
+execute_after_confirm \
+	"Install node LTS" \
+	'apt-get install -y build-essential'\
+	'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'\
+	'sudo apt-get install -y nodejs'
