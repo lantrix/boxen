@@ -24,8 +24,17 @@ try {
   choco upgrade windbg
   choco upgrade dotPeek
 
+  # Java Dev
+  choco upgrade jdk8
+  choco upgrade intellijidea-community
+  choco upgrade gradle
+
   # NodeJS
-  choco upgrade nodejs
+  choco upgrade nodejs-lts
+
+  # VMs
+  choco upgrade vagrant
+  choco upgrade virtualbox
 
   Write-ChocolateySuccess 'Windows Packages Upgraded'
 } catch {

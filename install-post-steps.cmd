@@ -4,3 +4,5 @@ pause
 powershell.exe -ExecutionPolicy Bypass -Command ".\boxstarter\Configure-SublimeConfig.ps1"
 pause
 powershell.exe -ExecutionPolicy Bypass -Command ".\boxstarter\Configure-PowerShellProfile.ps1"
+pause
+powershell.exe -ExecutionPolicy Bypass -Command ".\boxstarter\Install-Modules.ps1"
