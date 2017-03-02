@@ -17,11 +17,6 @@ try {
   # Media
   cinst spotify
 
-  # Powershell
-  cinst windowsazurepowershell
-  cinst AWSTools.Powershell
-  cinst poshgit
-
   # Dev
   cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
   cinst visualstudiocode

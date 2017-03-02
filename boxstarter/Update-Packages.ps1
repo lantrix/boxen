@@ -17,11 +17,6 @@ try {
   # Media
   choco upgrade spotify
 
-  # Powershell
-  choco upgrade windowsazurepowershell
-  choco upgrade AWSTools.Powershell
-  choco upgrade poshgit
-
   # Dev
   choco upgrade visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
   choco upgrade visualstudiocode
