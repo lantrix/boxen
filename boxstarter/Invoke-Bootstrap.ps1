@@ -25,7 +25,7 @@ try {
   cinst dotPeek
 
   # Java Dev
-  cinst jdk7
+  cinst jdk8
   cinst intellijidea-community
   cinst gradle
 

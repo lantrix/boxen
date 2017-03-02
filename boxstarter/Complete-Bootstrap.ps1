@@ -1,5 +1,4 @@
 Set-ExecutionPolicy -Force RemoteSigned
-Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
 iwr https://chocolatey.org/install.ps1 | iex #Choco Install
 
 #.NET CORE 1.0.1 - https://www.microsoft.com/net/core#windowsvs2015
