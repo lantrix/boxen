@@ -42,8 +42,6 @@ try {
   Set-ExplorerOptions -showHidenFilesFoldersDrives -showProtectedOSFiles -showFileExtensions
   Set-TaskbarSmall
 
-  Write-ChocolateySuccess 'Windows boostrapped'
 } catch {
-  Write-ChocolateyFailure 'Windows Bootstrap: ' $($_.Exception.Message)
-  throw
+  throw "Windows Bootstrap: $($_.Exception.Message)"
 }
