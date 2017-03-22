@@ -3,3 +3,4 @@ Install-Module -Name Pester -Scope CurrentUser -Verbose -Force -SkipPublisherChe
 Install-Module -Name AzureRM -Scope CurrentUser -Verbose
 Install-Module -Name posh-git -Scope CurrentUser -Verbose
 Install-Module -Name AWSPowerShell -Scope CurrentUser -Verbose
+Install-Module -Name InvokeQuery -Scope CurrentUser -Verbose
