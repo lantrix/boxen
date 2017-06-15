@@ -18,7 +18,7 @@ try {
   cinst spotify
 
   # Dev
-  cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
+  #cinst visualstudio2015community -packageParameters "--AdminFile https://raw.githubusercontent.com/lantrix/boxen/master/boxstarter/AdminDeployment.xml"
   cinst visualstudiocode
   cinst sysinternals
   cinst windbg
