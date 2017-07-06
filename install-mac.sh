@@ -70,7 +70,7 @@ brew link --overwrite node
 
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
-	'brew install caskroom/cask/brew-cask' \
+	'brew tap caskroom/cask' \
 	'brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup' \
 	'brew tap caskroom/versions' \
 	'brew tap buo/cask-upgrade' \
