@@ -55,7 +55,8 @@ ALL_THE_THINGS_BREW=\
 ' node@6'\
 ' macvim --env-std --with-override-system-vim'\
 ' tree'\
-' tig'
+' tig'\
+' packer'
 
 execute_after_confirm \
 	'Install useful brew packages' \
