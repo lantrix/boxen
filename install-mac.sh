@@ -47,19 +47,69 @@ execute_after_confirm \
 	'brew doctor'
 
 ALL_THE_THINGS_BREW=\
-'git'\
-' git-flow-avh'\
-' jq'\
-' gpg'\
-' wget'\
-' node@6'\
-' macvim --env-std --with-override-system-vim'\
-' tree'\
-' tig'\
-' packer'\
+'adns'\
+' autoconf'\
+' automake'\
+' awscli'\
 ' bash'\
-' bashdb'
-
+' bashdb'\
+' cli53'\
+' gdbm'\
+' cmake'\
+' cscope'\
+' curl'\
+' dirmngr'\
+' gettext'\
+' git'\
+' git-flow-avh'\
+' gmp'\
+' gnu-getopt'\
+' gnupg'\
+' gnupg2jq'\
+' gnutls'\
+' go'\
+' gpg-agent'\
+' icu4c'\
+' libassuan'\
+' libffi'\
+' libgcrypt'\
+' libgpg-error'\
+' libidn2'\
+' libusb'\
+' libksba'\
+' libtasn1'\
+' libyaml'\
+' libtool'\
+' libunistring'\
+' libusb-compat'\
+' macvim --with-override-system-vim'\
+' mono'\
+' msodbcsql'\
+' mssql-tools'\
+' mysql'\
+' nettle'\
+' node@6'\
+' p11-kit'\
+' npth'\
+' oniguruma'\
+' openssl'\
+' openssl@1.1'\
+' pkg-config'\
+' packer'\
+' percona-toolkit'\
+' pinentry'\
+' pth'\
+' python'\
+' readline'\
+' samba'\
+' sqlite'\
+' syncthing'\
+' tig'\
+' tree'\
+' unixodbc'\
+' watch'\
+' wget'\
+' xz'
 execute_after_confirm \
 	'Install useful brew packages' \
 	"brew install $ALL_THE_THINGS_BREW" \
