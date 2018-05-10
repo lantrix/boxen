@@ -80,29 +80,40 @@ execute_after_confirm \
 	'brew tap caskroom/fonts'
 
 ALL_THE_THINGS_CASK=\
-'sublime-text'\
+'1password'\
 ' appzapper'\
+' beyond-compare'\
+' charles'\
+' chefdk'\
+' disablemonitor'\
 ' dropbox'\
-' 1password'\
+' firefox'\
+' flux'\
+' font-source-code-pro'\
+' font-source-code-pro-for-powerline'\
+' functionflip'\
 ' google-chrome'\
-' slack'\
 ' intellij-idea-ce'\
 ' istat-menus'\
-' spotify'\
-' flux'\
-' beyond-compare'\
-' sourcetree'\
-' vmware-fusion7'\
 ' iterm2'\
-' font-source-code-pro'\
-' functionflip'\
-' chefdk'\
-' vagrant'\
-' charles'\
+' mongochef'\
+' mysqlworkbench'\
+' plexamp'\
+' postman'\
+' powershell'\
+' progressive-downloader'\
 ' remote-desktop-manager'\
+' slack'\
+' sourcetree'\
+' spotify'\
+' sublime-text'\
 ' tigervnc-viewer'\
 ' tunnelblick'\
-' visual-studio-code'
+' vagrant'\
+' virtualbox'\
+' visual-studio-code'\
+' vmware-fusion7'\
+' whatsapp'
 
 CHROME_CASK_DIR="/usr/local/Caskroom/google-chrome/latest/Google\ Chrome.app"
 #The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
