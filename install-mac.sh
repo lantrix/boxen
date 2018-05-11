@@ -288,12 +288,16 @@ then
 fi
 
 execute_after_confirm \
-        "Install CoffeeScript" \
-        "npm install -g coffee-script"
+        "Update npm" \
+        "npm install -g npm" \
+        "rm /usr/local/opt/node@8/bin/npm" \
+        "rm /usr/local/opt/node@8/bin/npx" \
+        "ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js npx" \
+        "ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js npm"
 
 execute_after_confirm \
-        "Install esvalidate npm for jsvalidate sublime plugin \
-        "npm install -g esvalidate"
+        "Install Global packages" \
+        "npm install -g azure-cli eslint esvalidate jshint loadtest npm-check recursive-blame"
 
 execute_after_confirm \
 	'Install Python PIP' \
