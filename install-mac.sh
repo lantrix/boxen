@@ -88,7 +88,7 @@ ALL_THE_THINGS_BREW=\
 ' mssql-tools'\
 ' mysql'\
 ' nettle'\
-' node@6'\
+' node@8'\
 ' p11-kit'\
 ' npth'\
 ' oniguruma'\
