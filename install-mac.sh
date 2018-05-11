@@ -297,7 +297,7 @@ execute_after_confirm \
 
 execute_after_confirm \
         "Install Global packages" \
-        "npm install -g azure-cli eslint esvalidate jshint loadtest npm-check recursive-blame"
+        "npm install -g azure-cli eslint esvalidate jshint loadtest npm-check recursive-blame serverless"
 
 execute_after_confirm \
 	'Install Python PIP' \
