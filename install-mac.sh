@@ -5,7 +5,7 @@ GITHUB_USER="lantrix"
 SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
 SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
 ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
-ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus5.extras.plist?dl=1"
+ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus6.extras.plist?dl=1"
 ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
 VMWARE_PREF_FILE="$HOME/Library/Preferences/VMware Fusion/preferences"
@@ -43,7 +43,7 @@ execute_after_confirm \
 
 execute_after_confirm \
 	'Install Homebrew' \
-	'ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' \
+	'/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' \
 	'brew doctor'
 
 ALL_THE_THINGS_BREW=\
@@ -237,18 +237,6 @@ then
 	fi
 fi
 
-#iStat Config
-if [[ -d /usr/local/Caskroom/istat-menus ]]
-then
-	echo "Setup iStat Menus config"
-	if [[ ! -f $ISTAT_PREF_FILE ]]
-	then
-		curl --progress-bar -L -o ${ISTAT_PREF_FILE} ${ISTAT_CONFIG_URI}
-	else
-		echo Existing iStat prefs left alone at $ISTAT_PREF_FILE
-	fi
-fi
-
 #iTerm2 Config
 if [[ -d /usr/local/Caskroom/iterm2 ]]
 then
@@ -298,16 +286,6 @@ execute_after_confirm \
 execute_after_confirm \
         "Install Global packages" \
         "npm install -g azure-cli eslint esvalidate jshint loadtest npm-check recursive-blame serverless"
-
-execute_after_confirm \
-	'Install Python PIP' \
-	"curl --progress-bar -L -o /tmp/get-pip.py https://bootstrap.pypa.io/get-pip.py" \
-	"sudo -H python /tmp/get-pip.py"
-
-execute_after_confirm \
-	'Install AWS CLI' \
-	"sudo -H pip install awscli" \
-	"complete -C '`which aws_completer`' aws"
 
 execute_after_confirm \
 	'Install Powerline' \
