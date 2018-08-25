@@ -4,7 +4,7 @@
 GITHUB_USER="lantrix"
 SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
 SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus5.extras.plist"
+ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus6.extras.plist"
 ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus6.extras.plist?dl=1"
 ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
