@@ -65,7 +65,8 @@ ALL_THE_THINGS_BREW=\
 ' gmp'\
 ' gnu-getopt'\
 ' gnupg'\
-' gnupg2jq'\
+' gnupg2'\
+' jq'\
 ' gnutls'\
 ' go'\
 ' gpg-agent'\
