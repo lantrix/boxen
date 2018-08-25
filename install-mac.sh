@@ -64,12 +64,10 @@ ALL_THE_THINGS_BREW=\
 ' git-flow-avh'\
 ' gmp'\
 ' gnu-getopt'\
-' gnupg'\
 ' gnupg2'\
 ' jq'\
 ' gnutls'\
 ' go'\
-' gpg-agent'\
 ' icu4c'\
 ' libassuan'\
 ' libffi'\
