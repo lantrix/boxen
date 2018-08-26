@@ -87,7 +87,7 @@ ALL_THE_THINGS_BREW=\
 ' mssql-tools'\
 ' mysql'\
 ' nettle'\
-' node@8'\
+' node@8 --without-npm'\
 ' p11-kit'\
 ' npth'\
 ' oniguruma'\
@@ -118,12 +118,12 @@ if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
 then
 	sudo chown -R $USER /usr/local
 fi
-brew link --overwrite node
+brew link --overwrite node@8
 
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
 	'brew tap caskroom/cask' \
-	'brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup' \
+	'brew update && brew cleanup' \
 	'brew tap caskroom/versions' \
 	'brew tap buo/cask-upgrade' \
 	'brew tap caskroom/fonts'
