@@ -11,7 +11,7 @@ ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iter
 VMWARE_PREF_FILE="$HOME/Library/Preferences/VMware Fusion/preferences"
 VMWARE_CONFIG_URI="https://www.dropbox.com/s/kp055mivqdfxlxz/preferences?dl=1"
 VAGRANT_LICENCE_URI="https://www.dropbox.com/s/sanitized/license.lic?dl=1"
-RUBY_VERSION="2.2"
+RUBY_VERSION="2.5"
 
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
