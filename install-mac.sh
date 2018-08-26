@@ -118,7 +118,7 @@ if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
 then
 	sudo chown -R $USER /usr/local
 fi
-brew link --overwrite node@8
+brew link --force --overwrite node@8
 
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
