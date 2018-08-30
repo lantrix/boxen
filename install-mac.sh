@@ -77,7 +77,6 @@ ALL_THE_THINGS_BREW=\
 ' mssql-tools'\
 ' mysql'\
 ' nettle'\
-' node@8 --without-npm'\
 ' p11-kit'\
 ' npth'\
 ' oniguruma'\
@@ -108,6 +107,7 @@ if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
 then
 	sudo chown -R $USER /usr/local
 fi
+brew install node@8 --without-npm
 brew link --force --overwrite node@8
 
 execute_after_confirm \
