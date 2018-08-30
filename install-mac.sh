@@ -42,58 +42,30 @@ execute_after_confirm \
 	'brew doctor'
 
 ALL_THE_THINGS_BREW=\
-'adns'\
-' autoconf'\
+'autoconf'\
 ' automake'\
 ' awscli'\
 ' bash'\
 ' bashdb'\
 ' cli53'\
-' gdbm'\
 ' cmake'\
 ' cscope'\
 ' curl'\
-' gettext'\
 ' git'\
 ' git-flow-avh'\
-' gmp'\
-' gnu-getopt'\
 ' gnupg2'\
 ' jq'\
-' gnutls'\
 ' go'\
-' icu4c'\
-' libassuan'\
-' libffi'\
-' libgcrypt'\
-' libgpg-error'\
-' libidn2'\
-' libusb'\
-' libksba'\
-' libtasn1'\
-' libyaml'\
-' libunistring'\
-' libusb-compat'\
 ' mssql-tools'\
 ' mysql'\
-' nettle'\
-' p11-kit'\
-' npth'\
-' oniguruma'\
-' pkg-config'\
 ' packer'\
 ' percona-toolkit'\
-' pinentry'\
-' pth'\
-' python'\
-' readline'\
 ' sqlite'\
 ' syncthing'\
 ' tig'\
 ' tree'\
 ' watch'\
-' wget'\
-' xz'
+' wget'
 
 execute_after_confirm \
 	'Install useful brew packages' \
