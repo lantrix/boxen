@@ -60,7 +60,6 @@ ALL_THE_THINGS_BREW=\
 ' mysql'\
 ' packer'\
 ' percona-toolkit'\
-' sqlite'\
 ' syncthing'\
 ' tig'\
 ' tree'\
