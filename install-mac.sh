@@ -53,7 +53,6 @@ ALL_THE_THINGS_BREW=\
 ' cmake'\
 ' cscope'\
 ' curl'\
-' dirmngr'\
 ' gettext'\
 ' git'\
 ' git-flow-avh'\
