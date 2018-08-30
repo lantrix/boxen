@@ -77,7 +77,6 @@ ALL_THE_THINGS_BREW=\
 ' libunistring'\
 ' libusb-compat'\
 ' macvim --with-override-system-vim'\
-' mono'\
 ' msodbcsql'\
 ' mssql-tools'\
 ' mysql'\
