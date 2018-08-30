@@ -31,11 +31,6 @@ function execute_after_confirm {
 	fi
 }
 
-for dir in "/usr/local /usr/local/bin /usr/local/include /usr/local/lib /usr/local/share"; do
-	sudo chgrp admin $dir
-	sudo chmod g+w $dir
-done
-
 execute_after_confirm \
 	'Generate SSH keys' \
 	"ssh-keygen -t rsa -C \"`uname -n`\"" \
