@@ -72,11 +72,9 @@ ALL_THE_THINGS_BREW=\
 ' libksba'\
 ' libtasn1'\
 ' libyaml'\
-' libtool'\
 ' libunistring'\
 ' libusb-compat'\
 ' macvim --with-override-system-vim'\
-' msodbcsql'\
 ' mssql-tools'\
 ' mysql'\
 ' nettle'\
@@ -84,8 +82,6 @@ ALL_THE_THINGS_BREW=\
 ' p11-kit'\
 ' npth'\
 ' oniguruma'\
-' openssl'\
-' openssl@1.1'\
 ' pkg-config'\
 ' packer'\
 ' percona-toolkit'\
@@ -98,13 +94,15 @@ ALL_THE_THINGS_BREW=\
 ' syncthing'\
 ' tig'\
 ' tree'\
-' unixodbc'\
 ' watch'\
 ' wget'\
 ' xz'
 execute_after_confirm \
 	'Install useful brew packages' \
 	"brew install $ALL_THE_THINGS_BREW" \
+	"brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-mssql-release" \
+	"brew update" \
+	"ACCEPT_EULA=y brew install msodbcsql"
 
 #Fix node perms if needed
 if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
