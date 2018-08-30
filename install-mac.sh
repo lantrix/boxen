@@ -74,7 +74,6 @@ ALL_THE_THINGS_BREW=\
 ' libyaml'\
 ' libunistring'\
 ' libusb-compat'\
-' macvim --with-override-system-vim'\
 ' mssql-tools'\
 ' mysql'\
 ' nettle'\
