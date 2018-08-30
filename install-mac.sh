@@ -87,7 +87,6 @@ ALL_THE_THINGS_BREW=\
 ' pth'\
 ' python'\
 ' readline'\
-' samba'\
 ' sqlite'\
 ' syncthing'\
 ' tig'\
@@ -95,6 +94,7 @@ ALL_THE_THINGS_BREW=\
 ' watch'\
 ' wget'\
 ' xz'
+
 execute_after_confirm \
 	'Install useful brew packages' \
 	"brew install $ALL_THE_THINGS_BREW" \
@@ -103,11 +103,11 @@ execute_after_confirm \
 	"ACCEPT_EULA=y brew install msodbcsql"
 
 #Fix node perms if needed
+brew install node@8 --without-npm
 if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
 then
 	sudo chown -R $USER /usr/local
 fi
-brew install node@8 --without-npm
 brew link --force --overwrite node@8
 
 execute_after_confirm \
