@@ -119,12 +119,9 @@ ALL_THE_THINGS_CASK=\
 ' visual-studio-code'\
 ' whatsapp'
 
-CHROME_CASK_DIR="/usr/local/Caskroom/google-chrome/latest/Google\ Chrome.app"
-#The Mac App Store version of 1Password won't work with a Homebrew-Cask-linked Google Chrome. To bypass this limitation we move Chrome to Applications
 execute_after_confirm \
 	'Install useful cask packages' \
-	"brew cask install $ALL_THE_THINGS_CASK" \
-	"if [[ -d $CHROME_CASK_DIR ]]; then mv $CHROME_CASK_DIR /Applications/ ; fi"
+	"brew cask install $ALL_THE_THINGS_CASK"
 
 execute_after_confirm \
 	"Install RVM" \
