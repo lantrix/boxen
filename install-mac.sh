@@ -203,18 +203,6 @@ then
 	fi
 fi
 
-#Vmware Fusion Config
-if [[ -d /usr/local/Caskroom/vmware-fusion7 ]]
-then
-	echo "Setup VMWare config"
-	if [[ ! -f $VMWARE_PREF_FILE ]]
-	then
-		curl --progress-bar -L -o ${VMWARE_PREF_FILE} ${VMWARE_CONFIG_URI}
-	else
-		echo Existing VMWare prefs left alone at $VMWARE_PREF_FILE
-	fi
-fi
-
 #Vagrant Config/Licence
 if [[ -d /usr/local/Caskroom/vagrant ]]
 then
