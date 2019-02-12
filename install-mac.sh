@@ -127,7 +127,6 @@ execute_after_confirm \
 	"Install RVM" \
 	"command curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
 	"command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -" \
-	"curl -sSL https://rvm.io/mpapis.asc | gpg --import -" \
 	"\\curl -sSL https://get.rvm.io | bash -s stable" \
 	"source $HOME/.rvm/scripts/rvm" \
 	"rvm install $RUBY_VERSION" \
@@ -135,14 +134,15 @@ execute_after_confirm \
 
 execute_after_confirm \
 	"Install Homesick" \
+	'source $HOME/.rvm/scripts/rvm' \
 	'gem install homesick' \
-	'homesick clone lantrix/dotfiles' \
-	'homesick symlink dotfiles' \
 	'homesick clone lantrix/dotfiles-vim' \
 	'homesick symlink dotfiles-vim' \
 	'homesick clone lantrix/powerline-config' \
 	'homesick symlink powerline-config' \
-	'vim +PluginInstall +qall'
+	'vim +PluginInstall +qall' \
+	'homesick clone lantrix/dotfiles' \
+	'homesick symlink dotfiles'
 
 execute_after_confirm \
 	"Install GO" \
