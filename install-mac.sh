@@ -155,7 +155,7 @@ execute_after_confirm \
 	"brew install go"
 
 #Sublime Sync Setting
-if [[ -d /usr/local/Caskroom/sublime-text3 ]]
+if [[ -d /usr/local/Caskroom/sublime-text ]]
 then
 	if [[ ! -L $SUBLIME_USER_DIR ]]; then
 		echo "Installing Package Control"
