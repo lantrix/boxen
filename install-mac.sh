@@ -52,11 +52,9 @@ ALL_THE_THINGS_BREW=\
 ' cscope'\
 ' curl'\
 ' git'\
-' git-flow-avh'\
 ' gnupg2'\
 ' jq'\
 ' go'\
-' mssql-tools'\
 ' mysql'\
 ' packer'\
 ' percona-toolkit'\
@@ -102,11 +100,10 @@ ALL_THE_THINGS_CASK=\
 ' font-source-code-pro'\
 ' font-source-code-pro-for-powerline'\
 ' functionflip'\
+' gitkraken'\
 ' google-chrome'\
-' intellij-idea-ce'\
 ' istat-menus'\
 ' iterm2'\
-' mongochef'\
 ' mysqlworkbench'\
 ' plexamp'\
 ' postman'\
@@ -114,15 +111,12 @@ ALL_THE_THINGS_CASK=\
 ' progressive-downloader'\
 ' remote-desktop-manager'\
 ' slack'\
-' sourcetree'\
 ' spotify'\
 ' sublime-text'\
-' tigervnc-viewer'\
 ' tunnelblick'\
 ' vagrant'\
 ' virtualbox'\
 ' visual-studio-code'\
-' vmware-fusion7'\
 ' whatsapp'
 
 CHROME_CASK_DIR="/usr/local/Caskroom/google-chrome/latest/Google\ Chrome.app"
