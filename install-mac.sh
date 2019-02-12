@@ -83,9 +83,9 @@ execute_after_confirm \
 	'Install Brew Cask & Versions' \
 	'brew tap caskroom/cask' \
 	'brew update && brew cleanup' \
-	'brew tap caskroom/versions' \
+	'brew tap homebrew/cask-versions' \
 	'brew tap buo/cask-upgrade' \
-	'brew tap caskroom/fonts'
+	'brew tap homebrew/cask-fonts'
 
 ALL_THE_THINGS_CASK=\
 '1password'\
