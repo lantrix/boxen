@@ -71,14 +71,6 @@ execute_after_confirm \
 	"brew update" \
 	"ACCEPT_EULA=y brew install msodbcsql"
 
-#Fix node perms if needed
-brew install node@8 --without-npm
-if [[ `ls -l /usr/local/share/systemtap | awk '{print $3}'` -ne $USER ]]
-then
-	sudo chown -R $USER /usr/local
-fi
-brew link --force --overwrite node@8
-
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
 	'brew tap caskroom/cask' \
@@ -214,18 +206,6 @@ then
 		vagrant plugin license vagrant-vmware-fusion /tmp/license.lic
 	fi
 fi
-
-execute_after_confirm \
-        "Update npm" \
-        "npm install -g npm" \
-        "rm /usr/local/opt/node@8/bin/npm" \
-        "rm /usr/local/opt/node@8/bin/npx" \
-        "ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js npx" \
-        "ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js npm"
-
-execute_after_confirm \
-        "Install Global packages" \
-        "npm install -g azure-cli eslint esvalidate jshint loadtest npm-check recursive-blame serverless"
 
 execute_after_confirm \
 	'Install Powerline' \
