@@ -4,6 +4,7 @@
 GITHUB_USER="lantrix"
 ADMIN_USER="myadminuser"
 RUBY_VERSION="2.2"
+PYTHON_VERSION="3.9.1"
 
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
@@ -46,9 +47,15 @@ execute_after_confirm \
 ALL_THE_THINGS_APT=\
 ' vim'\
 ' tree'\
-' python-pip'\
 ' inadyn'
 
 execute_after_confirm \
 	'Install useful packages' \
 	"apt-get install $ALL_THE_THINGS_APT" \
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+curl https://pyenv.run | bash
+pyenv install $PYTHON_VERSION
+pyenv global $PYTHON_VERSION
+pip install --user powerline-status
