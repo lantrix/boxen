@@ -38,10 +38,6 @@ execute_after_confirm \
 	"sudo apt-get install syncthing"
 
 execute_after_confirm \
-	"Install Powerline" \
-	"pip install --user git+git://github.com/powerline/powerline"
-
-execute_after_confirm \
 	"Install Homesick" \
 	'gem install homesick' \
 	"homesick clone ${GITHUB_USER}/dotfiles" \
@@ -55,3 +51,10 @@ execute_after_confirm \
 	'apt-get install -y build-essential'\
 	'curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -'\
 	'sudo apt-get install -y nodejs'
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+curl https://pyenv.run | bash
+pyenv install $PYTHON_VERSION
+pyenv global $PYTHON_VERSION
+pip install --user powerline-status
