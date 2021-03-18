@@ -49,6 +49,7 @@ ALL_THE_THINGS_BREW=\
 ' mysql'\
 ' packer'\
 ' percona-toolkit'\
+' pyenv'\
 ' syncthing'\
 ' tig'\
 ' tree'\
@@ -93,8 +94,8 @@ ALL_THE_THINGS_CASK=\
 ' progressive-downloader'\
 ' remote-desktop-manager'\
 ' slack'\
-' spotify'\
 ' sublime-text'\
+' tidal'\
 ' tunnelblick'\
 ' vagrant'\
 ' virtualbox'\
@@ -103,7 +104,7 @@ ALL_THE_THINGS_CASK=\
 
 execute_after_confirm \
 	'Install useful cask packages' \
-	"brew cask install $ALL_THE_THINGS_CASK"
+	"brew install --cask $ALL_THE_THINGS_CASK"
 
 execute_after_confirm \
 	"Install RVM" \
@@ -135,6 +136,10 @@ execute_after_confirm \
 	"export PATH=$PATH:$GOPATH/bin" \
 	"export PATH=$PATH:$GOROOT/bin" \
 	"brew install go"
+
+execute_after_confirm \
+	"Install NVM" \
+	"curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash"
 
 #execute_after_confirm \
 #	'Install Powerline' \
