@@ -2,16 +2,7 @@
 
 #Config
 GITHUB_USER="lantrix"
-SUBLIME_SYNC_DIR="$HOME/Dropbox/syncdata/Sublime/User"
-SUBLIME_USER_DIR="$HOME/Library/Application Support/Sublime Text 3/Packages/User"
-ISTAT_PREF_FILE="$HOME/Library/Preferences/com.bjango.istatmenus6.extras.plist"
-ISTAT_CONFIG_URI="https://www.dropbox.com/s/sanitized/com.bjango.istatmenus6.extras.plist?dl=1"
-ITERM2_PREF_FILE="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
-ITERM2_CONFIG_URI="https://www.dropbox.com/s/393p4o2bwbrvf9g/com.googlecode.iterm2.plist?dl=1"
-VMWARE_PREF_FILE="$HOME/Library/Preferences/VMware Fusion/preferences"
-VMWARE_CONFIG_URI="https://www.dropbox.com/s/kp055mivqdfxlxz/preferences?dl=1"
-VAGRANT_LICENCE_URI="https://www.dropbox.com/s/sanitized/license.lic?dl=1"
-RUBY_VERSION="2.6.1"
+RUBY_VERSION="3.0.0"
 
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
@@ -84,7 +75,6 @@ ALL_THE_THINGS_CASK=\
 ' appzapper'\
 ' beyond-compare'\
 ' charles'\
-' chefdk'\
 ' disablemonitor'\
 ' dropbox'\
 ' firefox'\
@@ -146,69 +136,7 @@ execute_after_confirm \
 	"export PATH=$PATH:$GOROOT/bin" \
 	"brew install go"
 
-#Sublime Sync Setting
-if [[ -d /usr/local/Caskroom/sublime-text ]]
-then
-	if [[ ! -L $SUBLIME_USER_DIR ]]; then
-		echo "Installing Package Control"
-		curl --progress-bar -L -o $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package https://packagecontrol.io/Package%20Control.sublime-package
-
-		echo "Setup Sublime Text 3 Userdata Sync"
-		open -a "Sublime Text"
-		sleep 2
-		kill -9 `ps -ef |grep Sublime |egrep -v 'grep|plugin' | awk '{print $2}'`
-		read -p "Press [Enter] key after dropbox configured to sync Sublime user data to $SUBLIME_SYNC_DIR"
-		if [[ -d $SUBLIME_SYNC_DIR && -d $SUBLIME_USER_DIR ]]
-		then
-			rm -r "$SUBLIME_USER_DIR" && ln -s $SUBLIME_SYNC_DIR "$SUBLIME_USER_DIR"
-		else
-			echo Skipping Sublime Sync Setup - required dirs missing
-		fi
-	else
-		echo Skipping Sublime Sync Setup - already in place
-	fi
-fi
-
-#iStat Config
-if [[ -d /usr/local/Caskroom/istat-menus ]]
-then
-	echo "Setup iStat Menus config"
-	if [[ ! -f $ISTAT_PREF_FILE ]]
-	then
-		curl --progress-bar -L -o ${ISTAT_PREF_FILE} ${ISTAT_CONFIG_URI}
-	else
-		echo Existing iStat prefs left alone at $ISTAT_PREF_FILE
-	fi
-fi
-
-#iTerm2 Config
-if [[ -d /usr/local/Caskroom/iterm2 ]]
-then
-	echo "Setup iTerm2 config"
-	if [[ ! -f $ITERM2_PREF_FILE ]]
-	then
-		curl --progress-bar -L -o ${ITERM2_PREF_FILE} ${ITERM2_CONFIG_URI}
-		curl -L https://raw.githubusercontent.com/chriskempson/base16-iterm2/master/base16-ocean.dark.itermcolors > /tmp/base16-ocean.dark.itermcolors
-		open /tmp/base16-ocean.dark.itermcolors
-	else
-		echo Existing iStat prefs left alone at $ITERM2_PREF_FILE
-	fi
-fi
-
-#Vagrant Config/Licence
-if [[ -d /usr/local/Caskroom/vagrant ]]
-then
-	echo "Install Vagrant VMWare plugin"
-	curl --progress-bar -L -o /tmp/license.lic ${VAGRANT_LICENCE_URI}
-	vagrant plugin install vagrant-vmware-fusion
-	if [[ -f /tmp/license.lic ]]
-	then
-		vagrant plugin license vagrant-vmware-fusion /tmp/license.lic
-	fi
-fi
-
-execute_after_confirm \
-	'Install Powerline' \
-	"pip install --user powerline-status" \
-	"pip install --user pyuv"
-
+#execute_after_confirm \
+#	'Install Powerline' \
+#	"pip install --user powerline-status" \
+#	"pip install --user pyuv"
