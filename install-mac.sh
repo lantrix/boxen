@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 #Config
 GITHUB_USER="lantrix"
 RUBY_VERSION="3.0.0"
@@ -65,7 +67,7 @@ execute_after_confirm \
 
 execute_after_confirm \
 	'Install Brew Cask & Versions' \
-	'brew tap caskroom/cask' \
+	'brew tap hombrew/cask' \
 	'brew update && brew cleanup' \
 	'brew tap homebrew/cask-versions' \
 	'brew tap buo/cask-upgrade' \
