@@ -77,7 +77,6 @@ ALL_THE_THINGS_CASK=\
 ' appzapper'\
 ' beyond-compare'\
 ' charles'\
-' disablemonitor'\
 ' dropbox'\
 ' firefox'\
 ' flux'\
@@ -86,6 +85,7 @@ ALL_THE_THINGS_CASK=\
 ' functionflip'\
 ' gitkraken'\
 ' google-chrome'\
+' insomnia'\
 ' istat-menus'\
 ' iterm2'\
 ' mysqlworkbench'\
@@ -94,14 +94,11 @@ ALL_THE_THINGS_CASK=\
 ' powershell'\
 ' progressive-downloader'\
 ' remote-desktop-manager'\
-' slack'\
 ' sublime-text'\
 ' tidal'\
 ' tunnelblick'\
 ' vagrant'\
-' virtualbox'\
-' visual-studio-code'\
-' whatsapp'
+' visual-studio-code'
 
 execute_after_confirm \
 	'Install useful cask packages' \
