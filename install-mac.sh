@@ -66,8 +66,7 @@ execute_after_confirm \
 	"ACCEPT_EULA=y brew install msodbcsql"
 
 execute_after_confirm \
-	'Install Brew Cask & Versions' \
-	'brew tap hombrew/cask' \
+	'Install Brew Versions' \
 	'brew update && brew cleanup' \
 	'brew tap homebrew/cask-versions' \
 	'brew tap buo/cask-upgrade' \
