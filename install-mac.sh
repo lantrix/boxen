@@ -52,6 +52,7 @@ ALL_THE_THINGS_BREW=\
 ' packer'\
 ' percona-toolkit'\
 ' pyenv'\
+' svn'\
 ' syncthing'\
 ' tig'\
 ' tree'\
@@ -76,6 +77,7 @@ ALL_THE_THINGS_CASK=\
 '1password'\
 ' appzapper'\
 ' beyond-compare'\
+' brave-browser'\
 ' charles'\
 ' dropbox'\
 ' firefox'\
