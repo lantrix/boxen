@@ -31,7 +31,7 @@ execute_after_confirm \
 
 execute_after_confirm \
 	'Install Homebrew' \
-	'/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"' \
+	'/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' \
 	'brew doctor'
 
 ALL_THE_THINGS_BREW=\
