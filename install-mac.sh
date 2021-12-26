@@ -79,11 +79,10 @@ ALL_THE_THINGS_CASK=\
 ' beyond-compare'\
 ' brave-browser'\
 ' charles'\
+' homebrew/cask/docker'\
 ' dropbox'\
 ' firefox'\
-' flux'\
-' font-source-code-pro'\
-' font-source-code-pro-for-powerline'\
+' homebrew/cask/flux'\
 ' functionflip'\
 ' gitkraken'\
 ' google-chrome'\
@@ -97,14 +96,13 @@ ALL_THE_THINGS_CASK=\
 ' progressive-downloader'\
 ' remote-desktop-manager'\
 ' sublime-text'\
-' tidal'\
 ' tunnelblick'\
 ' vagrant'\
 ' visual-studio-code'
 
 execute_after_confirm \
 	'Install useful cask packages' \
-	"brew install --cask $ALL_THE_THINGS_CASK"
+	"brew install $ALL_THE_THINGS_CASK"
 
 execute_after_confirm \
 	"Install RVM" \
