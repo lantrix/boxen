@@ -136,8 +136,8 @@ execute_after_confirm \
 	"brew install go"
 
 execute_after_confirm \
-	"Install NVM" \
-	"curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash"
+	"Install Fast Node Manager" \
+	"curl -fsSL https://fnm.vercel.app/install | bash"
 
 #execute_after_confirm \
 #	'Install Powerline' \
