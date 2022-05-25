@@ -55,10 +55,7 @@ ALL_THE_THINGS_BREW=\
 
 execute_after_confirm \
 	'Install useful brew packages' \
-	"brew install $ALL_THE_THINGS_BREW" \
-	"brew tap microsoft/msodbcsql https://github.com/Microsoft/homebrew-mssql-release" \
-	"brew update" \
-	"ACCEPT_EULA=y brew install msodbcsql"
+	"brew install $ALL_THE_THINGS_BREW"
 
 execute_after_confirm \
 	'Install Brew Versions' \
