@@ -72,7 +72,7 @@ ALL_THE_THINGS_CASK=\
 ' docker'\
 ' dropbox'\
 ' firefox'\
-' homebrew/cask/flux'\
+' flux'\
 ' functionflip'\
 ' gitkraken'\
 ' google-chrome'\
