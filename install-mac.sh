@@ -4,7 +4,7 @@ set -e
 
 #Config
 GITHUB_USER="lantrix"
-RUBY_VERSION="3.0.0"
+RUBY_VERSION="3.1.2"
 
 function execute_after_confirm {
 	read -p "$1 ($2) ? [y/n] " -n 1 -r
@@ -43,16 +43,10 @@ ALL_THE_THINGS_BREW=\
 ' cli53'\
 ' cmake'\
 ' cscope'\
-' curl'\
 ' git'\
 ' gnupg2'\
 ' jq'\
-' go'\
-' mysql'\
-' packer'\
-' percona-toolkit'\
 ' pyenv'\
-' svn'\
 ' syncthing'\
 ' tig'\
 ' tree'\
@@ -78,8 +72,7 @@ ALL_THE_THINGS_CASK=\
 ' appzapper'\
 ' beyond-compare'\
 ' brave-browser'\
-' charles'\
-' homebrew/cask/docker'\
+' docker'\
 ' dropbox'\
 ' firefox'\
 ' homebrew/cask/flux'\
@@ -89,20 +82,16 @@ ALL_THE_THINGS_CASK=\
 ' insomnia'\
 ' istat-menus'\
 ' iterm2'\
-' mysqlworkbench'\
+' microsoft-remote-desktop'\
 ' plexamp'\
-' postman'\
 ' powershell'\
 ' progressive-downloader'\
-' remote-desktop-manager'\
 ' sublime-text'\
-' tunnelblick'\
-' vagrant'\
 ' visual-studio-code'
 
 execute_after_confirm \
 	'Install useful cask packages' \
-	"brew install $ALL_THE_THINGS_CASK"
+	"brew install --cask $ALL_THE_THINGS_CASK"
 
 execute_after_confirm \
 	"Install RVM" \
