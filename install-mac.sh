@@ -32,7 +32,7 @@ execute_after_confirm \
 execute_after_confirm \
 	'Install Homebrew' \
 	'/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' \
-	'brew doctor'
+	'eval "$(/opt/homebrew/bin/brew shellenv)"'
 
 ALL_THE_THINGS_BREW=\
 'autoconf'\
