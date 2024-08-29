@@ -34,61 +34,9 @@ execute_after_confirm \
 	'/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' \
 	'eval "$(/opt/homebrew/bin/brew shellenv)"'
 
-ALL_THE_THINGS_BREW=\
-'autoconf'\
-' automake'\
-' awscli'\
-' bash'\
-' bashdb'\
-' cli53'\
-' cmake'\
-' cscope'\
-' git'\
-' gnupg2'\
-' jq'\
-' pyenv'\
-' syncthing'\
-' tig'\
-' tree'\
-' watch'\
-' wget'
-
 execute_after_confirm \
-	'Install useful brew packages' \
-	"brew install $ALL_THE_THINGS_BREW"
-
-execute_after_confirm \
-	'Install Brew Versions' \
-	'brew update && brew cleanup' \
-	'brew tap homebrew/cask-versions' \
-	'brew tap buo/cask-upgrade' \
-	'brew tap homebrew/cask-fonts'
-
-ALL_THE_THINGS_CASK=\
-'1password'\
-' appzapper'\
-' beyond-compare'\
-' brave-browser'\
-' docker'\
-' dropbox'\
-' firefox'\
-' flux'\
-' functionflip'\
-' gitkraken'\
-' google-chrome'\
-' insomnia'\
-' istat-menus'\
-' iterm2'\
-' microsoft-remote-desktop'\
-' plexamp'\
-' powershell'\
-' progressive-downloader'\
-' sublime-text'\
-' visual-studio-code'
-
-execute_after_confirm \
-	'Install useful cask packages' \
-	"brew install --cask $ALL_THE_THINGS_CASK"
+	'Restore brew Bundle' \
+	"brew bundle"
 
 execute_after_confirm \
 	"Install RVM" \
